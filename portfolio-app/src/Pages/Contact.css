@@ -1,0 +1,12 @@
+.founder-img:hover {
+    content: url("../Images/shaq-seal.jpeg");
+    border-radius: 0%;
+    transition-duration: 100s;
+    transition-delay: 100s;
+ } 
+
+.founder-img {
+    border-radius: 50%;
+    transition-duration: 100s;
+    transition-delay: 100s;
+}

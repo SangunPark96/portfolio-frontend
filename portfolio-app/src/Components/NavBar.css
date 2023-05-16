@@ -1,0 +1,69 @@
+#logo{ 
+	top:0; 
+	left:0; 
+    
+} 
+
+.pikachu {
+    border-radius: 50%;
+}
+
+
+nav {
+  background: #DB852Cff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  box-shadow: 2px 2px 4px #213F26ff;
+  margin-bottom: 1em;
+}
+
+.project-link {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    
+}
+
+.project-link:hover {
+    color: white
+} 
+
+.interest-link {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+
+.interest-link:hover {
+    color: white
+} 
+.new-project-link {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+
+.new-project-link:hover {
+    color: white
+} 
+.new-interest-link {
+    text-decoration: none;
+    color: black;
+    
+}
+
+.new-interest-link:hover {
+    color: white
+} 
+.contact-link {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    
+}
+
+.contact-link:hover {
+    color: white
+} 

@@ -5,30 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: grey;
+  background-color: #ECBC3Fff;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* 
-#logo{ 
-	position:fixed; 
-	top:0; 
-	left:0; 
-  
-} 
-img {
-  border-radius: 50%;
-} */
 
-nav {
-  background: #DDE1E4;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-  box-shadow: 2px 2px 4px #EC368D;
-  margin-bottom: 1em;
-}
+
+
+/* --saffron: #ECBC3Fff;
+--british-racing-green: #213F26ff;
+--burnt-orange: #B75C22ff;
+--cal-poly-green: #2D5432ff;
+--fulvous: #DB852Cff;
+--sienna: #802B0Dff;
+ */

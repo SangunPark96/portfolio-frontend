@@ -1,33 +1,51 @@
 import { Link } from "react-router-dom";
 import logo from '../Images/pikachu-logo.jpeg'
+import './NavBar.css'
 
 export default function NavBar() {
     
     
     return(
-        <nav className="nav" id="nav">
-	            <div id="logo">   
+        <nav className="nav-bar">
+
+	        <div id="logo">   
                 <Link className="nav-link" to="/">
-                    <img src={logo} alt='logo' width="125" height="125"></img> 
+                    <img className="pikachu" src={logo} alt='logo' width="125" height="125"></img> 
                 </Link>
-                </div> 
+            </div> 
+
       <br></br>
-      <Link className="nav-link" to="/projects">
-        Projects
-      </Link>
+
+                <Link className="project-link" to="/projects">
+                    Projects
+                </Link>
+
       <br></br>
-      <Link className="nav-link" to="/interests">
-        Interests
-      </Link>
+
+                <Link className="interest-link" to="/interests">
+                    Interests
+                </Link>
+
       <br></br>
-      <Link className="nav-link" to="/projects/new">
-        New Project
-      </Link>
+
+                <Link className="new-project-link" to="/projects/new">
+                    New Project
+                </Link>
+
       <br></br>
-      <Link className="nav-link" to="/interests/new">
-        New Interest
-      </Link>
+
+                <Link className="new-interest-link" to="/interests/new">
+                    New Interest
+                </Link>
+
       <br></br>
+
+                <Link className="contact-link" to="/contact">
+                    About Me
+                </Link>
+
+      <br></br>
+
     </nav>
     )
 }

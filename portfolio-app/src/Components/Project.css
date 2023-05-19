@@ -1,0 +1,9 @@
+.ProjectCell {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    border: 10px solid green;
+    padding: 50px;
+    margin: 20px;
+    text-align: center;
+}

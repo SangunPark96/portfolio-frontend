@@ -31,12 +31,7 @@ export default function ProjectDetails() {
       };
 
      
-//       <div>
-//       <Link to={`/projects/${index}/edit`}>
-//       <button>Edit</button>
-//     </Link>
-//   </div>
-    
+
     
     return(
         <>
@@ -48,11 +43,19 @@ export default function ProjectDetails() {
             {project.revisit ? <p>I plan on revisiting this website to work on it with my new skills.</p> : <p>I do not plan on coming back to this project. <br/> I found it was a good start to learning the technology but i am ready to try a new application for the technology</p>}
             <a href={project.repo_link}>  <img src={githubLogo} alt="githublogo"  width="70" height="70px" /> </a>
         </main>
+        
         <div>
           <Link to={`/transactions`}>
             <button>Back</button>
           </Link>
         </div>
+
+        <div>
+          <Link to={`/projects/${id}/edit`}>
+            <button>Edit</button>
+          </Link>
+        </div>
+    
         <div>
             <button onClick={handleDelete}>Delete</button>
         </div>

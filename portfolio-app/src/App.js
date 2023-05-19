@@ -9,6 +9,7 @@ import ProjectIndex from './Pages/ProjectIndex';
 import Show from './Pages/Show';
 import FourOFour from './Pages/FourOFour';
 import New from './Pages/New';
+import Edit from './Pages/Edit';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/projects" element={<ProjectIndex />} />
       <Route path="/projects/:id" element={<Show />} />
       <Route path="/projects/new" element={<New/>} />
+      <Route path="/projects/:id/edit" element={<Edit />} />
       <Route path="*" element={<FourOFour/>}/>
       </Routes>
       </main>

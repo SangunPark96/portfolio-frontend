@@ -1,11 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { useNavigate, Link, useParams } from "react-router-dom";
 
-export default function ProjectNewForm() {
-
+export default function ProjectEditForm() {
+    let {id} = useParams();
     const navigate = useNavigate();
-    
     const [project, setProject] = useState({
         name: "",
         technology: "",
@@ -15,32 +14,39 @@ export default function ProjectNewForm() {
         repo_link: "",
       });
 
+    useEffect(() => {
+        axios.get(`${process.env.REACT_APP_API_URL}/projects/${id}`).then((res) => {
+          setProject(res.data[0]);
+        }).catch((e) => {
+          console.log(e)
+        })
+      }, [id]);
 
     const handleTextChange = (event) => {
         setProject({ ...project, [event.target.id]: event.target.value });
       };
     
-      const handleCheckboxChange = () => {
+
+    const handleCheckboxChange = () => {
         setProject({ ...project, revisit: !project.revisit });
       };
-    
-      const handleSubmit = (event) => {
+ 
+
+    const handleSubmit = (event) => {
         event.preventDefault();
-        axios
-        .post(`${process.env.REACT_APP_API_URL}/projects`, project)
-        .then(() => {
-          navigate(`/projects`)
-        })
-        .catch((e) => {
-          console.log(e)
-        });
-      };
-    
+        axios.put(`${process.env.REACT_APP_API_URL}/projects/${id}`, project)
+            .then((res) => {
+                setProject(res.data[0])
+                navigate(`/projects/${id}`)
+            }).catch((e) => {
+        console.log(e)
+    })
+  };
 
 
 
-return (
-    <div>
+    return (
+        <div>
         <h1>Add A New Project</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name:
@@ -78,7 +84,6 @@ return (
                     id="description"
                     type="text"
                     value={project.description}
-                    placeholder="Quick Summary"
                     onChange={handleTextChange}
                     />
                 </label>
@@ -106,6 +111,7 @@ return (
 
                 <input type='submit' value='Submit'/>
             </form>
+                
                 <Link to={`/projects`}>
 
                     <button className="NewBackButton">Back</button>

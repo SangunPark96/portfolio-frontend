@@ -1,0 +1,15 @@
+.InterestCell {
+    display: flex;
+    width: 20%;
+    border: 10px solid green;
+    padding: 50px;
+    margin: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .InterestCell {
+        grid-template-columns: 1fr;
+      }
+       
+}

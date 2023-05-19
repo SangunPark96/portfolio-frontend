@@ -1,0 +1,9 @@
+.InterestsMap {
+    display: flex;
+}
+@media (min-width: 1000px) {
+    .InterestMap {
+        display: grid;
+      }
+       
+}

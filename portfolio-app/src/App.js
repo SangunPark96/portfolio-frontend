@@ -6,6 +6,7 @@ import NavBar from './Components/NavBar';
 import Home from './Pages/Home';
 import Contact from './Pages/Contact';
 import ProjectIndex from './Pages/ProjectIndex';
+import InterestIndex from './Pages/InterestIndex';
 import Show from './Pages/Show';
 import FourOFour from './Pages/FourOFour';
 import New from './Pages/New';
@@ -21,6 +22,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/projects" element={<ProjectIndex />} />
+      <Route path="/interests" element={<InterestIndex />} />
       <Route path="/projects/:id" element={<Show />} />
       <Route path="/projects/new" element={<New/>} />
       <Route path="/projects/:id/edit" element={<Edit />} />

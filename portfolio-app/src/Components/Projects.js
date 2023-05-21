@@ -6,10 +6,9 @@ import '../Components/Projects.css'
 export default function Projects() {
 
     const [projectList, setProjectList] = useState([])
-    const API = process.env.REACT_APP_API_URL
 
     useEffect(() => {
-        axios.get(`${API}/projects`).then((res) => {
+        axios.get(`${process.env.REACT_APP_API_URL}/projects`).then((res) => {
             setProjectList(res.data)
         }).catch((e) => {
             console.log({ error: {e}})

@@ -6,10 +6,9 @@ import '../Components/Interests.css'
 export default function Interests() {
 
     const [interestList, setInterestList] = useState([])
-    const API = process.env.REACT_APP_API_URL
 
     useEffect(() => {
-        axios.get(`${API}/interests`).then((res) => {
+        axios.get(`${process.env.REACT_APP_API_URL}/interests`).then((res) => {
             setInterestList(res.data)
         }).catch((e) => {
             console.log({ error: {e}})

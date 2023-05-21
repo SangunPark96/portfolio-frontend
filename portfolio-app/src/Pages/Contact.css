@@ -10,3 +10,21 @@
     transition-duration: 100s;
     transition-delay: 100s;
 }
+
+.about-page p {
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    color: black;
+}
+
+.about-page p:hover,
+.about-page p:focus,
+.about-page p:active {
+    transform: scale(1.1);
+    color: white;
+}

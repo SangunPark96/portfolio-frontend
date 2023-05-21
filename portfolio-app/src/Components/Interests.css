@@ -1,9 +1,6 @@
 .InterestsMap {
-    display: flex;
-}
-@media (min-width: 1000px) {
-    .InterestMap {
-        display: grid;
-      }
-       
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    font-family: 'Bebas Neue', sans-serif;;
 }

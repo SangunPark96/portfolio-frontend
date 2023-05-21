@@ -16,11 +16,11 @@ export default function Contact() {
             </h1>
 
             <p>
-              Github: https://github.com/SangunPark96
+              github.com/SangunPark96
             </p>
 
             <p>
-              Linkedin: https://www.linkedin.com/in/sangunpark/
+              linkedin.com/in/sangunpark/
             </p>
 
               <div>

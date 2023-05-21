@@ -6,6 +6,8 @@
 
 .pikachu {
     border-radius: 50%;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -17,7 +19,7 @@ nav {
   padding: 1em;
   box-shadow: 2px 2px 4px #213F26ff;
   margin-bottom: 1em;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 .project-link {
@@ -27,8 +29,7 @@ nav {
     border-radius: 5px;
     transition:  transform .3s;
     padding:  .5em 1em;
-    border: 5px solid red;
-    border-radius: 10px;
+  
 }
 
 .project-link:hover {
@@ -42,8 +43,7 @@ nav {
     font-size: large;
     transition:  transform .3s;
     padding:  .5em 1em;
-    border: 5px solid red;
-    border-radius: 10px;
+   
 }
 
 .interest-link:hover {
@@ -56,8 +56,7 @@ nav {
     font-size: large;
     transition:  transform .3s;
     padding:  .5em 1em;
-    border: 5px solid red;
-    border-radius: 10px;
+
 }
 
 .new-project-link:hover {
@@ -69,8 +68,7 @@ nav {
     color: black;
     transition:  transform .3s;
     padding:  .5em 1em;
-    border: 5px solid red;
-    border-radius: 10px;
+ 
 }
 
 .new-interest-link:hover {
@@ -83,8 +81,7 @@ nav {
     font-size: large;
     transition:  transform .3s;
     padding:  .5em 1em;
-    border: 5px solid red;
-    border-radius: 10px;
+
 }
 
 .contact-link:hover {

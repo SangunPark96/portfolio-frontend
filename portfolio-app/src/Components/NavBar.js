@@ -10,7 +10,7 @@ export default function NavBar() {
 
 	        <div id="logo">   
                 <Link className="nav-link" to="/">
-                    <img className="pikachu" src={logo} alt='logo' width="125" height="125"></img> 
+                    <img className="pikachu" src={logo} alt='logo' width="100" height="100"></img> 
                 </Link>
             </div> 
 

@@ -18,9 +18,9 @@ export default function Project({ project, index}){
                 <p>Completed in Module {project.module} of Pursuit</p>
                 
                 
-                <a href={project.repo_link}>  <img src={githubLogo} alt="githublogo"  width="70" height="70px" /> </a>
+                <a href={project.repo_link} className="hvr-pulse-grow">  <img src={githubLogo} alt="githublogo"  width="70" height="70px" /> </a>
                 <br/>
-                <Link className='seeMore' to={`/projects/${project.id}`}> Click Here to see more </Link> 
+                <Link className='hvr-grow' to={`/projects/${project.id}`}> Click Here to see more </Link> 
             </aside>
         </div>
     )

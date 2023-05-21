@@ -1,15 +1,10 @@
 .InterestCell {
-    display: flex;
-    width: 20%;
-    border: 10px solid green;
+    display: grid;
+    border: 10px solid #B75C22ff;
     padding: 50px;
     margin: 20px;
     text-align: center;
-}
-
-@media (min-width: 768px) {
-    .InterestCell {
-        grid-template-columns: 1fr;
-      }
-       
+    font-family: 'Bebas Neue', sans-serif;;
+    font-size: large;
+    
 }

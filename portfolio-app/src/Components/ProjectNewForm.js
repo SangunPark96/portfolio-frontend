@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link, useParams } from "react-router-dom";
+import '../Components/ProjectNewForm.css'
 
 export default function ProjectNewForm() {
 
@@ -42,7 +43,7 @@ export default function ProjectNewForm() {
 return (
     <div>
         <h1>Add A New Project</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="submission-form">
                 <label htmlFor="name">Name:
                     <input
                     id="name"
@@ -95,7 +96,7 @@ return (
                 <label htmlFor="github-link">Github:
                     <input
                     id="repo_link"
-                    type="text"
+                    type="url"
                     value={project.repo_link}
                     placeholder="Github Repository URL"
                     onChange={handleTextChange}
@@ -104,7 +105,7 @@ return (
                 <br/>
 
 
-                <input type='submit' value='Submit'/>
+                <input type='submit' value='Submit' id="submitBtn"/>
             </form>
                 <Link to={`/projects`}>
 

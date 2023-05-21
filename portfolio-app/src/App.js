@@ -11,6 +11,9 @@ import Show from './Pages/Show';
 import FourOFour from './Pages/FourOFour';
 import New from './Pages/New';
 import Edit from './Pages/Edit';
+import ShowInterests from './Pages/ShowInterests';
+import EditInterests from './Pages/EditInterests';
+import NewInterest from './Pages/NewInterest';
 
 function App() {
   return (
@@ -24,8 +27,11 @@ function App() {
       <Route path="/projects" element={<ProjectIndex />} />
       <Route path="/interests" element={<InterestIndex />} />
       <Route path="/projects/:id" element={<Show />} />
+      <Route path="/interests/:id" element={<ShowInterests />} />
       <Route path="/projects/new" element={<New/>} />
+      <Route path="/interests/new" element={<NewInterest/>} />
       <Route path="/projects/:id/edit" element={<Edit />} />
+      <Route path="/interests/:id/edit" element={<EditInterests/>} />
       <Route path="*" element={<FourOFour/>}/>
       </Routes>
       </main>

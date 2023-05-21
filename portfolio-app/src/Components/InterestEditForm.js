@@ -2,42 +2,42 @@ import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export default function ProjectEditForm() {
+export default function InterestEditForm() {
     let {id} = useParams();
     const navigate = useNavigate();
-    const [project, setProject] = useState({
+    const [interest, setInterest] = useState({
         name: "",
-        technology: "",
-        module: 0,
-        description: "",
-        revisit: false,
-        repo_link: "",
+        media_type: "",
+        genre: "",
+        still_enjoy: false,
+        img_link: "",
+        summary: ""
       });
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_URL}/projects/${id}`).then((res) => {
-          setProject(res.data[0]);
+        axios.get(`${process.env.REACT_APP_API_URL}/interests/${id}`).then((res) => {
+          setInterest(res.data[0]);
         }).catch((e) => {
           console.log(e)
         })
       }, [id]);
 
     const handleTextChange = (event) => {
-        setProject({ ...project, [event.target.id]: event.target.value });
+        setInterest({ ...interest, [event.target.id]: event.target.value });
       };
     
 
     const handleCheckboxChange = () => {
-        setProject({ ...project, revisit: !project.revisit });
+        setInterest({ ...interest, still_enjoy: !interest.still_enjoy });
       };
  
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.put(`${process.env.REACT_APP_API_URL}/projects/${id}`, project)
+        axios.put(`${process.env.REACT_APP_API_URL}/interests/${id}`, interest)
             .then((res) => {
-                setProject(res.data[0])
-                navigate(`/projects/${id}`)
+                setInterest(res.data[0])
+                navigate(`/interests/${id}`)
             }).catch((e) => {
         console.log(e)
     })
@@ -47,63 +47,66 @@ export default function ProjectEditForm() {
 
     return (
         <div>
-        <h1>Edit A Project Log</h1>
+        <h1>Edit Interest</h1>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name:
                     <input
                     id="name"
                     type="text"
-                    value={project.name}
-                    placeholder="Project Name"
+                    value={interest.name}
+                    placeholder="Interest Name"
                     onChange={handleTextChange}
                     />
                 </label>
                 <br/>
-                <label htmlFor="technology">Technology Used:
+                <label htmlFor="media_type">Media type:
                     <input
-                    id="technology"
+                    id="media_type"
                     type="text"
-                    value={project.technology}
-                    placeholder="Technology Used"
+                    value={interest.media_type}
+                    placeholder="Media Type"
                     onChange={handleTextChange}
                     />
                 </label>
                 <br/>
-                <label htmlFor="module">Module:
+                <label htmlFor="genre">Genre:
                     <input
-                    id="module"
-                    type="number"
-                    value={project.module}
-                    placeholder="0"
-                    onChange={handleTextChange}
-                    />
-                </label>
-                <br/>
-                <label htmlFor="description">Description:
-                    <input
-                    id="description"
+                    id="genre"
                     type="text"
-                    value={project.description}
+                    value={interest.genre}
+                    placeholder="Genre"
                     onChange={handleTextChange}
                     />
                 </label>
                 <br/>
-                <label>Will you revisit this?:
+                <label>Still Enjoy This?:
                     <input
-                    id="revisit"
+                    id="still_enjoy"
                     type="checkbox"
                     onChange={handleCheckboxChange}
-                    checked={!project.revisit}
+                    checked={!interest.still_enjoy}
                     />
                 </label>
                 <br/>
-                <label htmlFor="github-link">Github:
+                <label htmlFor="img_link">Image:
                     <input
                     id="repo_link"
                     type="url"
-                    value={project.repo_link}
-                    placeholder="Github Repository URL"
+                    value={interest.img_link}
+                    placeholder="Img URL"
                     onChange={handleTextChange}
+                    />
+                </label>
+                <br/>
+                <label htmlFor="summary">Quick Summary:
+                    <textarea
+                    id="summary"
+                    type="text"
+                    value={interest.summary}
+                    placeholder="Quick Summary"
+                    onChange={handleTextChange}
+                    rows={10}
+                    cols={50}
                     />
                 </label>
                 <br/>

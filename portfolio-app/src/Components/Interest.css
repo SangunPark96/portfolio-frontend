@@ -1,10 +1,18 @@
 .InterestCell {
     display: grid;
-    border: 10px solid #B75C22ff;
+    border: 10px solid #e0e1ddff;
     padding: 50px;
     margin: 20px;
     text-align: center;
     font-family: 'Bebas Neue', sans-serif;;
-    font-size: large;
-    
+    font-size: large;  
+}
+
+.InterestInfo {
+    color: #e0e1ddff;
+}
+
+.seeMore {
+    color: #e0e1ddff;
+    text-decoration: none;
 }

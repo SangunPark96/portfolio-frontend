@@ -11,6 +11,9 @@
     transition-delay: 100s;
 }
 
+.about-page{
+    color: #e0e1ddff;
+}
 .about-page p {
     vertical-align: middle;
     transform: translateZ(0);
@@ -19,7 +22,7 @@
     -moz-osx-font-smoothing: grayscale;
     transition-duration: 0.3s;
     transition-property: transform;
-    color: black;
+    color: #e0e1ddff;
 }
 
 .about-page p:hover,

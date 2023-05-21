@@ -3,6 +3,7 @@
     margin: 2rem auto;
     border: 2px solid #e74c3c;
     padding: 2rem;
+    color: #e0e1ddff;
 }
 label{
     display: block;
@@ -15,14 +16,14 @@ input, textarea {
 }
 #submitBtn {
     border:0;
-    background-color: #a69de7;
+    background-color: #0d1b2aff;
     padding: .5rem;
     color: white;
     margin: 1rem;
     width: auto;
     cursor:pointer;
     &:hover{
-        background: #3498d8;
+        background: #778da9ff;
     };
     position: relative;
     left: 205px;
@@ -30,14 +31,14 @@ input, textarea {
 
 .NewBackButton {
     border:0;
-    background-color: #a69de7;
+    background-color: #0d1b2aff;
     padding: .5rem;
     color: white;
     margin: 1rem;
     width: auto;
     cursor:pointer;
     &:hover{
-        background: #3498d8;
+        background: #778da9ff;
     }
 
 }

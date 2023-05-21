@@ -3,4 +3,5 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr, 1fr, 1fr, 1fr;
     font-family: 'Bebas Neue', sans-serif;;
+    color: #e0e1ddff;
 }

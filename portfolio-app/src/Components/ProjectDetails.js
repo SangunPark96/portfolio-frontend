@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import githubLogo from '../Images/Github-logo.png'
+import githubLogo from "../Images/github-logo.png"
+import '../Components/ProjectDetails.css'
 
 
 export default function ProjectDetails() {
@@ -34,32 +35,33 @@ export default function ProjectDetails() {
 
     
     return(
-        <>
-        <main>
+        <div className="ProjectDetails">
+        <main className="hvr-grow">
             <h3>This {project.name} was created for Pursuit Cohort 9.3 in Module {project.module}.</h3>
             <p>The app was bootstrapped using REACT and Express.</p>
             <p>A new technology learned and utilized for the development was {project.technology}.</p>
             <p>Description: {project.description}</p>
             {project.revisit ? <p>I plan on revisiting this website to work on it with my new skills.</p> : <p>I do not plan on coming back to this project. <br/> I found it was a good start to learning the technology but i am ready to try a new application for the technology</p>}
-            <a href={project.repo_link}>  <img src={githubLogo} alt="githublogo"  width="70" height="70px" /> </a>
+            <a href={project.repo_link} className="hvr-pulse-grow">  <img src={githubLogo} alt="githublogo"  width="70" height="70px" /> </a>
         </main>
-        
+        <div className="btnSection">
         <div>
           <Link to={`/transactions`}>
-            <button>Back</button>
+            <button className="backBtn">Back</button>
           </Link>
         </div>
 
         <div>
           <Link to={`/projects/${id}/edit`}>
-            <button>Edit</button>
+            <button className="editBtn">Edit</button>
           </Link>
         </div>
     
         <div>
-            <button onClick={handleDelete}>Delete</button>
+            <button onClick={handleDelete} className="deleteBtn">Delete</button>
         </div>
         
-        </>
+        </div>
+        </div>
     )
 }

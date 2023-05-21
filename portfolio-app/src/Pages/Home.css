@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .home {
-    color: #213F26ff;
+    color: #e0e1ddff;
     display: grid;
     place-items: center;
     align-content: center;
     min-height: 100vh;
     font-family:  'Bebas Neue', sans-serif;
 }
-h1 {
-    /* writing-mode: vertical-lr;
-    left: 10%; */
+.home h1{
+    /* color: blueviolet; */
+}
+.home h3{
+    /* color:blue */
+}
+
+.home h2{
+    /* color: aquamarine; */
 }

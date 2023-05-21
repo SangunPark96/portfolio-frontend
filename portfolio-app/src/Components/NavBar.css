@@ -12,19 +12,19 @@
 
 
 nav {
-  background: #DB852Cff;
+  background: #0d1b2aff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em;
-  box-shadow: 2px 2px 4px #213F26ff;
+  box-shadow: 2px 2px 4px #778da9ff;
   margin-bottom: 1em;
   font-family: 'Bebas Neue', sans-serif;
 }
 
 .project-link {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: large;
     border-radius: 5px;
     transition:  transform .3s;
@@ -33,13 +33,13 @@ nav {
 }
 
 .project-link:hover {
-    color: white;
+    color: #e0e1ddff;
     transform: translateY(-10px)
 } 
 
 .interest-link {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: large;
     transition:  transform .3s;
     padding:  .5em 1em;
@@ -47,12 +47,12 @@ nav {
 }
 
 .interest-link:hover {
-    color: white;
+    color: #e0e1ddff;
     transform: translateY(-10px)
 } 
 .new-project-link {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: large;
     transition:  transform .3s;
     padding:  .5em 1em;
@@ -60,24 +60,24 @@ nav {
 }
 
 .new-project-link:hover {
-    color: white;
+    color: #e0e1ddff;
     transform: translateY(-10px)
 } 
 .new-interest-link {
     text-decoration: none;
-    color: black;
+    color: white;
     transition:  transform .3s;
     padding:  .5em 1em;
  
 }
 
 .new-interest-link:hover {
-    color: white;
+    color: #e0e1ddff;
     transform: translateY(-10px)
 } 
 .contact-link {
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: large;
     transition:  transform .3s;
     padding:  .5em 1em;
@@ -85,6 +85,6 @@ nav {
 }
 
 .contact-link:hover {
-    color: white;
+    color: #e0e1ddff;
     transform: translateY(-10px)
 } 

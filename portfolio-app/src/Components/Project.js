@@ -1,6 +1,6 @@
 import './Project.css'
 import { Link } from 'react-router-dom'
-import githubLogo from '../Images/Github-logo.png'
+import githubLogo from '../Images/github-logo.png'
 
 export default function Project({ project, index}){
     return(
@@ -20,7 +20,7 @@ export default function Project({ project, index}){
                 
                 <a href={project.repo_link} className="hvr-pulse-grow">  <img src={githubLogo} alt="githublogo"  width="70" height="70px" /> </a>
                 <br/>
-                <Link className='hvr-grow' to={`/projects/${project.id}`}> Click Here to see more </Link> 
+                <Link className='hvr-grow' to={`/projects/${project.id}`}> <h4>Click Here to see more </h4></Link> 
             </aside>
         </div>
     )

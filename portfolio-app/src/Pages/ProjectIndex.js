@@ -1,4 +1,6 @@
 import Projects from "../Components/Projects"
+import "../Pages/ProjectIndex.css"
+
 export default function ProjectIndex() {
   
     return(

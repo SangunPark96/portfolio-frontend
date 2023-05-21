@@ -10,7 +10,7 @@ export default function Interest({ interest, index}){
                 <h1>{interest.name}</h1>   
                 
                 
-                <p><strong>Media Type:</strong> {interest.media_type}</p> 
+                <p><strong>{interest.media_type}</strong> </p> 
                 
                 
                 <p>{interest.genre}</p>

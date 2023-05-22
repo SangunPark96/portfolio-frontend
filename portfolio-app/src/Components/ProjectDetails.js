@@ -46,7 +46,7 @@ export default function ProjectDetails() {
         </main>
         <div className="btnSection">
         <div>
-          <Link to={`/transactions`}>
+          <Link to={`/projects`}>
             <button className="backBtn">Back</button>
           </Link>
         </div>

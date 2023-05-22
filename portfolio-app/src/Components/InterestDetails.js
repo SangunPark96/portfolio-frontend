@@ -56,7 +56,14 @@ export default function InterestDetails() {
         </div>
     
         <div>
-            <button onClick={handleDelete}>Delete</button>
+        <button onClick={() => {
+    const confirmBox = window.confirm(
+      "Do you really want to delete this interest?"
+    )
+    if (confirmBox === true) {
+      handleDelete()
+    }
+  }} className="deleteBtn">Delete</button>
         </div>
         
         </>

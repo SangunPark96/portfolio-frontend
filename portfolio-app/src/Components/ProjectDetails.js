@@ -60,7 +60,7 @@ export default function ProjectDetails() {
         <div>
         <button onClick={() => {
     const confirmBox = window.confirm(
-      "Do you really want to delete this Snack?"
+      "Do you really want to delete this project?"
     )
     if (confirmBox === true) {
       handleDelete()

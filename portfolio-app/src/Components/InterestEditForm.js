@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import '../Components/InterestEditForm.css'
 
 export default function InterestEditForm() {
     let {id} = useParams();
@@ -48,7 +49,7 @@ export default function InterestEditForm() {
     return (
         <div>
         <h1>Edit Interest</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="submission-form">
                 <label htmlFor="name">Name:
                     <input
                     id="name"
@@ -112,7 +113,7 @@ export default function InterestEditForm() {
                 <br/>
 
 
-                <input type='submit' value='Submit'/>
+                <input type='submit' value='Submit' className="submitBtn"/>
             </form>
                 
                 <Link to={`/projects`}>

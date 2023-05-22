@@ -58,7 +58,14 @@ export default function ProjectDetails() {
         </div>
     
         <div>
-            <button onClick={handleDelete} className="deleteBtn">Delete</button>
+        <button onClick={() => {
+    const confirmBox = window.confirm(
+      "Do you really want to delete this Snack?"
+    )
+    if (confirmBox === true) {
+      handleDelete()
+    }
+  }} className="deleteBtn">Delete</button>
         </div>
         
         </div>
